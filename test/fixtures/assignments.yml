@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  due_at: 
+  visable: false
+  description: MyText
+  teacher_id: 1
+
+two:
+  due_at: 
+  visable: false
+  description: MyText
+  teacher_id: 1

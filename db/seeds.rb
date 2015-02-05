@@ -12,3 +12,6 @@ Student.create(user_id: 1, teacher_id: 1) # id = 1
 User.create(name: 'Mason Matthews', email: 'mason@gmail.com', password: 'password') # id = 2
 Teacher.create(user_id: 2) # id = 1
 
+Assignment.create( due_at: DateTime.new + 2.day, visable: true, name: "Battleship", description: "Battleship with a test sweet suite", teacher_id: 1)
+Assignment.create( due_at: DateTime.new + 3.day, visable: true, name: "Currency", description: "Currency assignment", teacher_id: 1)
+
