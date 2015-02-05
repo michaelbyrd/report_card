@@ -1,0 +1,9 @@
+<h1>Students#index</h1>
+<p>Find me in app/views/students/index.html.erb</p>
+
+<% @teachers.each do |t| %>
+  <h2> <%= t.name %>'s students </h2>
+  <% t.students.each do |s| %>
+    <p> <%= s.name %> </p>
+  <% end %>
+<% end %>
