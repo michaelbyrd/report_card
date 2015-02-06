@@ -2,6 +2,7 @@ class AssignmentsController < ApplicationController
 
   respond_to :html, :json
 
+  before_action :check_user
   before_action :set_assignment, only: [:edit, :update, :show]
 
   def index
