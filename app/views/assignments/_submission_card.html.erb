@@ -1,0 +1,13 @@
+<div class="card">
+  <div class="card-copy">
+    <%= link_to s.student.name, '#' %>
+  </div>
+  <div class="card-copy">
+    <%= link_to "Github", s.repository %>
+  </div>
+  <% if s.application %>
+    <div class="card-copy">
+      <%= link_to "Application", s.application %>
+    </div>
+  <% end %>
+</div>

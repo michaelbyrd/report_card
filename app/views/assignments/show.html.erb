@@ -1,5 +1,7 @@
 <% if teacher? %>
-  <%= render 'teacher_assignment' %>
-<% else %>
-  <%= render 'student_assignment' %>
+  <div class="cards">
+    <% @assignment.submissions.each do |s| %>
+      <%= render partial: 'submission_card', :locals => {:s => s} %>
+    <% end %>
+  </div>
 <% end %>

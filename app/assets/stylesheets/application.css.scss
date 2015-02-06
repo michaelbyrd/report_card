@@ -18,8 +18,11 @@
 @import 'neat';
 
 
+.submission {
+  a { @include span-columns(2); }
+}
 
-#assignments {
+
   .cards {
     @include display(flex);
     @include flex-wrap(wrap);
@@ -113,7 +116,7 @@
       }
     }
   }
-}
+
 
 
 //nav

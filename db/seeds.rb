@@ -10,8 +10,13 @@ User.create(name: 'Michael Byrd', email: 'michael@gmail.com', password: 'passwor
 Student.create(user_id: 1, teacher_id: 1) # id = 1
 Submission.create(student_id: 1, assignment_id: 1, submitted_at: DateTime.now, repository: "https://github.com/michaelbyrd/battleship", application: "#")
 
-User.create(name: 'Mason Matthews', email: 'mason@gmail.com', password: 'password') # id = 2
-Teacher.create(user_id: 2) # id = 1
+
+User.create(name: 'Mae Beale', email: 'mea@gmail.com', password: 'password') # id = 2
+Student.create(user_id: 2, teacher_id: 1) # id = 2
+Submission.create(student_id: 2, assignment_id: 1, submitted_at: DateTime.now + 2.hours , repository: "https://github.com/michaelbyrd/battleship", application: "#")
+
+User.create(name: 'Mason Matthews', email: 'mason@gmail.com', password: 'password') # id = 3
+Teacher.create(user_id: 3) # id = 1
 
 Assignment.create( due_at: DateTime.new + 2.day, visable: true, name: "Battleship", description: "# Battleship
 
