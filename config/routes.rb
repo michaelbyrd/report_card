@@ -7,4 +7,5 @@ Rails.application.routes.draw do
   post 'sessions/logout'
 
   resources :assignments, except: [:destroy]
+  resources :submissions, except: [:show, :update, :destroy]
 end
