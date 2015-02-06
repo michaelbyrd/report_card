@@ -14,18 +14,5 @@
  */
 
 @import 'bourbon';
+@import 'base/base';
 @import 'neat';
-
-.assignment_form {
-  .date {
-
-  }
-  select {
-  }
-}
-
-section {
-  @include outer-container;
-  aside { @include span-columns(3); }
-  article { @include span-columns(9); }
-}
