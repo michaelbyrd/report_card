@@ -13,6 +13,10 @@ class AssignmentsController < ApplicationController
   end
 
   def show
+    if student?
+      session[:assignment_id] = @assignment.id
+      redirect_to new_submission_path
+    end
   end
 
   def new
