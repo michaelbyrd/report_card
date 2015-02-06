@@ -1,4 +1,6 @@
-<%= best_in_place @assignment, :visable, :as => :checkbox %>
+<% if teacher? %>
+  Visable? <%= best_in_place(@assignment, :visable, :as => :checkbox) %>
+<% end %>
 
 <label class="label-switch">
     <div class="checkbox"></div>
