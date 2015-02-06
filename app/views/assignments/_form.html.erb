@@ -1,25 +1,44 @@
-<%= form_for(@assignment) do |f| %>
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
-  </div>
+<section class = "assignment_form">
+  <%= form_for(@assignment) do |f| %>
+  <section>
+    <aside>
+      <%= f.label :name %>
+    </aside>
+    <article>
+      <%= f.text_field :name %>
+    </article>
+  </section>
 
-  <div class="field">
-    <%= f.label :description %><br>
-    <%= f.text_area :description %>
-  </div>
+  <section>
+    <aside>
+      <%= f.label :description %><br>
+    </aside>
+    <article>
+      <%= f.text_area :description %>
+    </article>
+  </section>
 
-  <div class="field">
-    <%= f.label :due_at %><br>
+
+  <section>
+    <aside>
+      <%= f.label :due_at %><br>
+    </aside>
+    <article>
     <%= f.datetime_select :due_at %>
+  </section>
   </div>
 
-  <div class="field">
-    <%= f.label :visible %><br>
+  <section>
+    <aside>
+      <%= f.label :visible %><br>
+    </aside>
+    <article>
     <%= f.check_box :visable %>
-  </div>
+  </article>
+</section>
 
   <div class="actions">
     <%= f.submit %>
   </div>
-<% end %>
+  <% end %>
+</section>
