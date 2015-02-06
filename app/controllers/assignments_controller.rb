@@ -29,7 +29,7 @@ class AssignmentsController < ApplicationController
   end
 
   def edit
-
+    redirect_to @assignment if student?
   end
 
   def update

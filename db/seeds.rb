@@ -8,6 +8,7 @@
 
 User.create(name: 'Michael Byrd', email: 'michael@gmail.com', password: 'password') # id = 1
 Student.create(user_id: 1, teacher_id: 1) # id = 1
+Submission.create(student_id: 1, assignment_id: 1, submitted_at: DateTime.now, repository: "https://github.com/michaelbyrd/battleship", application: "#")
 
 User.create(name: 'Mason Matthews', email: 'mason@gmail.com', password: 'password') # id = 2
 Teacher.create(user_id: 2) # id = 1

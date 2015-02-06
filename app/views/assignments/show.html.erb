@@ -1,18 +1,5 @@
 <% if teacher? %>
-  Visable? <%= best_in_place(@assignment, :visable, :as => :checkbox) %>
-<% end %>
-
-<label class="label-switch">
-    <div class="checkbox"></div>
-</label>
-<%= render partial: 'card', :locals => { assignment: @assignment } %>
-<p><%= best_in_place @assignment, :description, :as => :textarea %></p>
-
-
-<% if teacher? %>
-  <script>
-    $(document).ready(function() {
-      jQuery(".best_in_place").best_in_place();
-      });
-  </script>
+  <%= render 'teacher_assignment' %>
+<% else %>
+  <%= render 'student_assignment' %>
 <% end %>

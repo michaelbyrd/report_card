@@ -1,1 +1,17 @@
+Visable? <%= best_in_place(@assignment, :visable, :as => :checkbox) %>
+
+
+<label class="label-switch">
+    <div class="checkbox"></div>
+</label>
+<%= render partial: 'card', :locals => { assignment: @assignment } %>
+<p><%= best_in_place @assignment, :description, :as => :textarea %></p>
+
+
 <%= render 'form' %>
+
+<script>
+    $(document).ready(function() {
+      jQuery(".best_in_place").best_in_place();
+      });
+</script>

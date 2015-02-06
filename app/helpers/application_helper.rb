@@ -6,4 +6,8 @@ module ApplicationHelper
   def teacher?
     current_user.is_teacher? if current_user
   end
+
+  def student?
+    current_user.is_student? if current_user
+  end
 end
