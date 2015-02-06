@@ -1,3 +1,18 @@
-<h1>All Assignments</h1>
+<div id="assignments">
+  <header>
+    <h1>Assignments</h1>
+  </header>
 
-<%= @assignments.reduce('') {|s, a| s += a.name+ ' ' } %>
+  <div class="cards">
+    <% @assignments.each do |a| %>
+      <div class="card">
+        <div class="card-header">
+          <%= a.name %>
+        </div>
+        <div class="card-copy">
+          <%= markdown(a.description[0..300] + "\n...") %>
+        </div>
+      </div>
+    <% end %>
+  </div>
+</div>
