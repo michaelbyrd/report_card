@@ -15,6 +15,9 @@ gem 'bourbon'
 gem 'neat'
 
 gem 'redcarpet'
+gem 'best_in_place'
+
+gem 'responders', '~> 2.0'
 
 group :development, :test do
   gem 'byebug'

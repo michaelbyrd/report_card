@@ -1,7 +1,17 @@
 class AssignmentsController < ApplicationController
-  before_action :set_assignment, only: [:edit, :update]
+
+  respond_to :html, :json
+
+  before_action :set_assignment, only: [:edit, :update, :show]
+
   def index
-    @assignments = Assignment.all # TODO write a method in assignment model to get assignments
+    @assignments = Assignment.all
+    # TODO write a method in assignment model to get assignments
+    # TODO figure out a better way to parse the assignment description,
+    # something like /300characters and then a newline/
+  end
+
+  def show
   end
 
   def new
@@ -22,10 +32,13 @@ class AssignmentsController < ApplicationController
   end
 
   def update
-    if @assignment.update(assignment_params)
-      redirect_to assignments_path
-    else
-      render 'edit'
+    respond_to do |format|
+      if @assignment.update(assignment_params)
+        format.html { redirect_to assignments_path }
+        format.json { respond_with @assignment }
+      else
+        render 'edit'
+      end
     end
   end
 
