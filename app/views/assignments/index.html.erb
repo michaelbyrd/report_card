@@ -1,0 +1,3 @@
+<h1>All Assignments</h1>
+
+<%= @assignments.reduce('') {|s, a| s += a.name+ ' ' } %>
