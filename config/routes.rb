@@ -8,4 +8,6 @@ Rails.application.routes.draw do
 
   resources :assignments, except: [:destroy]
   resources :submissions, except: [:show, :update, :destroy]
+
+  root 'assignments#index'
 end
