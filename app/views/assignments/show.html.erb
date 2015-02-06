@@ -1,12 +1,15 @@
 <div>
   <h1>Assignment</h1>
-  <p><%= best_in_place @assignment, :description, :as => :textarea %></p>
 </div>
 
 <%= render partial: 'card', :locals => { assignment: @assignment } %>
 
-<script>
-$(document).ready(function() {
-    jQuery(".best_in_place").best_in_place();
-    });
-</script>
+<p><%= best_in_place @assignment, :description, :as => :textarea %></p>
+
+<% if teacher? %>
+  <script>
+    $(document).ready(function() {
+      jQuery(".best_in_place").best_in_place();
+      });
+  </script>
+<% end %>
