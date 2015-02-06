@@ -1,10 +1,11 @@
-<div>
-  <h1>Assignment</h1>
-</div>
+<%= best_in_place @assignment, :visable, :as => :checkbox %>
 
+<label class="label-switch">
+    <div class="checkbox"></div>
+</label>
 <%= render partial: 'card', :locals => { assignment: @assignment } %>
-
 <p><%= best_in_place @assignment, :description, :as => :textarea %></p>
+
 
 <% if teacher? %>
   <script>

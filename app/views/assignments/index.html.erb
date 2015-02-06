@@ -1,14 +1,16 @@
 <div id="assignments">
   <div class="cards">
     <% @assignments.each do |a| %>
-      <div class="card">
-        <div class="card-header">
-          <%= link_to a.name, a %>
+      <% if a.visable %>
+        <div class="card">
+          <div class="card-header">
+            <%= link_to a.name, a %>
+          </div>
+          <div class="card-copy">
+            <%= markdown(a.description[0..300] + "\n...") %>
+          </div>
         </div>
-        <div class="card-copy">
-          <%= markdown(a.description[0..300] + "\n...") %>
-        </div>
-      </div>
+      <% end %>
     <% end %>
   </div>
 </div>
