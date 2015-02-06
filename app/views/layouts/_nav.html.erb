@@ -1,0 +1,12 @@
+<footer class="footer-2" role="contentinfo">
+  <ul>
+    <li><%= link_to "Assignments", assignments_path %></li>
+  </ul>
+
+  <div class="footer-secondary-links">
+    <ul>
+      <li><%= link_to current_user.name, '#' %></li>
+      <li><%= link_to 'Logout', sessions_logout_path %></li>
+    </ul>
+  </div>
+</footer>

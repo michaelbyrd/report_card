@@ -4,8 +4,4 @@
     <%= password_field_tag :password, nil, placeholder: "Password" %>
     <%= submit_tag "Login" %>
   <% end %>
-
-  <% if session[:user_id] %>
-    <%= button_to 'Logout', sessions_logout_path %>
-  <% end %>
 </div>
