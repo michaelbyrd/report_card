@@ -13,7 +13,7 @@ Submission.create(student_id: 1, assignment_id: 1, submitted_at: DateTime.now, r
 
 User.create(name: 'Mae Beale', email: 'mea@gmail.com', password: 'password') # id = 2
 Student.create(user_id: 2, teacher_id: 1) # id = 2
-Submission.create(student_id: 2, assignment_id: 1, submitted_at: DateTime.now + 2.hours , repository: "https://github.com/michaelbyrd/battleship", application: "#")
+Submission.create(student_id: 2, assignment_id: 1, submitted_at: DateTime.now + 2.hours , repository: "https://github.com/michaelbyrd/battleship")
 
 User.create(name: 'Mason Matthews', email: 'mason@gmail.com', password: 'password') # id = 3
 Teacher.create(user_id: 3) # id = 1
@@ -138,7 +138,7 @@ After completing this assignment, you should be able to effectively...
 When you are finished, create a pull request.
 ", teacher_id: 1)
 
-Assignment.create( due_at: DateTime.new + 3.day, visable: true, name: "Currency copy", description: "# Currency
+Assignment.create( due_at: DateTime.new + 3.day, visable: false, name: "Currency copy", description: "# Currency
 
 ## Description
 
