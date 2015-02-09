@@ -7,6 +7,7 @@ class SubmissionsController < ApplicationController
 
   def new
     @submission = Submission.new
+    @assignment = Assignment.find(session[:assignment_id])
   end
 
   def create
